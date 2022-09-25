@@ -53,9 +53,9 @@ for nr, kurseinheit in enumerate(kurseinheiten):
         # Get Book Content and merge
         merged_content = merged_content + soup.select(".book_content")
 
-    # Write to file
+    # Write to file, eliminating irregular font-size settings
     output.writelines([str(title_page)])
-    output.writelines([str(element) for element in merged_content])
+    output.writelines([str(element).replace("font-size:", "_font-size:") for element in merged_content])
 
 output.writelines([
     """

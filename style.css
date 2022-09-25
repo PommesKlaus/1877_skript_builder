@@ -1,16 +1,17 @@
 #intro.generalbox {
   page-break-after: always;
+  page-break-before: always;
   font-size: xx-large;
 }
 
 #intro.generalbox h5 {
   font-size: 2em;
-  margin-top: 50vh;
+  margin-top: 35vh;
 }
 
 #intro.generalbox:first-child h5 {
   font-size: 2em;
-  margin-top: 1em;
+  margin-top: 35vh;
 }
 
 .book_content {
@@ -43,7 +44,12 @@
   page-break-inside: avoid;
 }
 
-h1::after, h2::after, h3::after, h4::after, h5::after {
+.book_content h6 {
+  font-size: 1.2em;
+  page-break-inside: avoid;
+}
+
+h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
   content: "";
   display: block;
   height: 100px;
